@@ -4,11 +4,10 @@ import (
 	"io"
 	"log"
 	"net/http"
-	"os"
 )
 
 func main() {
-	port := os.Getenv("PORT")
+	port := "3000"
 	helloHandler := func(w http.ResponseWriter, req *http.Request) {
 		io.WriteString(w, "Hello, world!\n")
 	}
